@@ -49,20 +49,20 @@ public class HelloController
 
         // 객체오면 json 형식으로 반환한다.(기본)
         return hello;
-
     }
 
-    static class  Hello
+    static class Hello
     {
         private String name;
 
-        public String getName() {
+        public String getName()
+        {
             return name;
         }
 
-        public void setName(String name) {
+        public void setName(String name)
+        {
             this.name = name;
         }
     }
-
 }
