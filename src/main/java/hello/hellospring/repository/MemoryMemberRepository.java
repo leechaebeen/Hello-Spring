@@ -1,8 +1,6 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
-
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class MemoryMemberRepository implements MemberRepository
