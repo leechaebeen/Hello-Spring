@@ -23,10 +23,20 @@ public class MemberService
     // ■ 회원가입
     public Long join(Member member)
     {
-        // 중복 회원 검증
-        validateDuplicateMember(member);
-        memberRepository.save(member);
-        return member.getId();
+        long start = System.currentTimeMillis();
+
+        try {
+            // 중복 회원 검증
+            validateDuplicateMember(member);
+            memberRepository.save(member);
+            return member.getId();
+        }
+        finally {
+            Long finish = System.currentTimeMillis();
+            Long timeMS = finish - start;
+            System.out.println("join = " + timeMS + "ms");
+        }
+
     }
 
     // ■ 같은 이름 중복 가입 x
